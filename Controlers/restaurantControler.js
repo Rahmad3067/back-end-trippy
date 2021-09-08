@@ -1,7 +1,5 @@
 const restaurant = require("../Restaurant.json");
 
-
-
 const getAllRestaurants = (req, res) => {
     res.json({
         status: 'Ok',
@@ -9,7 +7,6 @@ const getAllRestaurants = (req, res) => {
         data: restaurant,
     })
 };
-
 
 const singleRestaurant = ( req, res ) => {
     const param = req.params.id;
@@ -19,7 +16,6 @@ const singleRestaurant = ( req, res ) => {
         data: restaurant[ param - 1],
     })
 };
-
 
 const addRestaurant = ( req, res ) => {
     const newRestaurant = req.body;
@@ -31,6 +27,7 @@ const addRestaurant = ( req, res ) => {
         data: restaurant,
     })
 };
+
 const newRestaurantName = ( req, res ) => {
     const id = req.params.id
     const name = req.query.name
@@ -62,8 +59,6 @@ const deletedRestaurant = (req, res) => {
         data: newBigRestaurant,
     })
 }
-
-
 
 module.exports = {
 	getAllRestaurants: getAllRestaurants,
